@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools">
+  <data>
+    <variable
+      name="viewModel"
+      type="com.example.final_capstone.election.ElectionsViewModel" />
+<variable
+  name="listener"
+  type="com.example.final_capstone.election.adapter.ElectionListener" />
+  </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".election.ElectionFragment">
+
+<TextView
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:textAlignment="center"
+  android:layout_margin="10dp"
+  style="@style/TextAppearance.AppCompat.Large"
+  android:text="UpcomingElection"></TextView>
+   <androidx.recyclerview.widget.RecyclerView
+     android:id="@+id/UpcomingElectionRecycler"
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+     tools:itemCount="4"
+     android:layout_weight="0.5"></androidx.recyclerview.widget.RecyclerView>
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:layout_margin="10dp"
+    style="@style/TextAppearance.AppCompat.Large"
+    android:text="SavedElection"></TextView>
+<androidx.recyclerview.widget.RecyclerView
+  android:id="@+id/SavedElectionRecycler"
+  android:layout_width="match_parent"
+  app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+  android:layout_height="0dp"
+  tools:itemCount="4"
+  android:layout_weight="0.5"></androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
+</layout>

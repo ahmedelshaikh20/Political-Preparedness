@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+
+
+    <variable
+      name="election"
+      type="com.example.final_capstone.network.models.Election" />
+    <variable
+      name="viewModel"
+      type="com.example.final_capstone.election.VoterInfoViewModel" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    >
+
+    <TextView
+      android:layout_margin="8dp"
+      android:text="@{election.name}"
+      android:id="@+id/name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      tools:text="Name"
+      android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"></TextView>
+    <TextView
+      android:id="@+id/date"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/gray50"
+      android:text="@{election.electionDay.toString()}"
+      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+      app:layout_constraintStart_toStartOf="@+id/name"
+      app:layout_constraintEnd_toEndOf="@+id/name"
+      app:layout_constraintTop_toBottomOf="@+id/name"
+      tools:text="2020-02-08 XXX XXXX" />
+    <TextView
+      android:id="@+id/Voting_locations"
+      android:layout_margin="8dp"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@+id/date"
+      app:layout_constraintEnd_toEndOf="@+id/date"
+      app:layout_constraintTop_toBottomOf="@+id/date"
+      android:text="Voting Locations"
+      ></TextView>
+
+    <TextView
+      android:id="@+id/Ballot_information"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintStart_toStartOf="@+id/Voting_locations"
+      app:layout_constraintEnd_toEndOf="@+id/Voting_locations"
+      app:layout_constraintTop_toBottomOf="@+id/Voting_locations"
+
+      android:text="Ballot Information"
+      ></TextView>
+    <Button
+      android:id="@+id/FollowElectionButton"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/date"
+      android:text="Follow Election"
+      app:layout_constraintStart_toStartOf="@+id/date"
+    ></Button>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

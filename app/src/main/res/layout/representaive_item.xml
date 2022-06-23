@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+  <data>
+    <variable
+      name="representaive"
+      type="com.example.final_capstone.representative.model.Representative" />
+  </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+
+  <de.hdodenhof.circleimageview.CircleImageView
+    app:profileImage="@{representaive.official.photoUrl}"
+    android:id="@+id/profile_image"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_margin="8dp"
+    android:src="@drawable/googleg_standard_color_18"
+    app:civ_border_color="#FF000000"
+    app:civ_border_width="2dp"
+    app:layout_constraintBottom_toBottomOf="@+id/party"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/title"
+
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:text="@{representaive.office.name}"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toStartOf="@+id/website_icon"
+    app:layout_constraintStart_toEndOf="@id/profile_image"
+    app:layout_constraintTop_toTopOf="parent" />
+  <TextView
+    android:id="@+id/official_name"
+    android:layout_margin="8dp"
+    android:textColor="@color/colorPrimaryDark"
+    android:layout_width="0dp"
+    android:text="@{representaive.official.name}"
+
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toStartOf="@id/website_icon"
+    app:layout_constraintTop_toBottomOf="@+id/title"
+    app:layout_constraintStart_toEndOf="@id/profile_image"
+    />
+
+
+  <TextView
+    android:id="@+id/party"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:text="@{representaive.official.party}"
+
+    android:layout_marginTop="4dp"
+    android:textColor="@color/colorPrimaryDark"
+    app:layout_constraintEnd_toStartOf="@id/website_icon"
+    app:layout_constraintStart_toEndOf="@id/profile_image"
+    app:layout_constraintTop_toBottomOf="@+id/official_name" />
+
+  <ImageView
+    android:id="@+id/website_icon"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_marginEnd="4dp"
+
+    android:contentDescription="Website"
+    app:layout_constraintBottom_toBottomOf="@+id/party"
+    app:layout_constraintEnd_toStartOf="@id/image_facebook_icon"
+    app:layout_constraintTop_toTopOf="@+id/title"
+    app:srcCompat="@drawable/googleg_standard_color_18" />
+
+  <ImageView
+    android:id="@+id/image_twitter_icon"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_marginEnd="4dp"
+    android:contentDescription="Twitter"
+    app:layout_constraintBottom_toBottomOf="@+id/image_facebook_icon"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/image_facebook_icon"
+    app:srcCompat="@mipmap/twittericon" />
+
+  <ImageView
+    android:id="@+id/image_facebook_icon"
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_marginEnd="4dp"
+    android:contentDescription="Facebook"
+    app:layout_constraintBottom_toBottomOf="@+id/website_icon"
+    app:layout_constraintEnd_toStartOf="@id/image_twitter_icon"
+    app:layout_constraintTop_toTopOf="@+id/website_icon"
+    app:srcCompat="@mipmap/facebookicon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

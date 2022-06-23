@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nav_graph.xml"
+  app:startDestination="@id/launchFragment">
+
+  <fragment
+    android:id="@+id/launchFragment"
+    android:name="com.example.final_capstone.Launch.LaunchFragment"
+    android:label="LaunchFragment" >
+    <action
+      android:id="@+id/action_launchFragment_to_electionFragment"
+      app:destination="@id/electionFragment" />
+    <action
+      android:id="@+id/action_launchFragment_to_representativeFragment"
+      app:destination="@id/representativeFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/electionFragment"
+    android:name="com.example.final_capstone.election.ElectionFragment"
+    android:label="fragment_election"
+    tools:layout="@layout/fragment_election" >
+    <action
+      android:id="@+id/action_electionFragment_to_voterInfoFragment"
+      app:destination="@id/voterInfoFragment"
+      app:popUpTo="@id/electionFragment" />
+  </fragment>
+  <fragment
+    android:id="@+id/voterInfoFragment"
+    android:name="com.example.final_capstone.election.VoterInfoFragment"
+    android:label="VoterInfoFragment" >
+    <argument
+      android:name="selected_election"
+      app:argType="com.example.final_capstone.network.models.Election" />
+  </fragment>
+  <fragment
+    android:id="@+id/representativeFragment"
+    android:name="com.example.final_capstone.representative.RepresentativeFragment"
+    android:label="RepresentativeFragment" />
+</navigation>
