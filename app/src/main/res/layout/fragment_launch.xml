@@ -23,7 +23,7 @@
   <Button
     android:id="@+id/representativeButton"
     android:layout_width="0dp"
-    android:text="Representative"
+    android:text="@string/representative"
 
     android:layout_height="wrap_content"
     app:layout_constraintBottom_toTopOf="@+id/upcomingButton"
@@ -34,7 +34,7 @@
   <Button
     android:id="@+id/upcomingButton"
     android:layout_width="0dp"
-    android:text="Upcoming"
+    android:text="@string/upcoming"
     android:layout_height="wrap_content"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="@+id/representativeButton"

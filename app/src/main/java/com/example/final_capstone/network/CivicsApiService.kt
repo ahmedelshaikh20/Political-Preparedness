@@ -60,7 +60,6 @@ interface CivicsApiService {
   suspend fun getElections(): ElectionResponse
   @GET("elections")
   suspend fun getElectionsStr(): ResponseBody
-
   @GET("voterinfo")
   suspend fun getVoterInfo(
     @Query("address") address: String,

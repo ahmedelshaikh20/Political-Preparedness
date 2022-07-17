@@ -51,7 +51,7 @@
       app:layout_constraintStart_toStartOf="@+id/date"
       app:layout_constraintEnd_toEndOf="@+id/date"
       app:layout_constraintTop_toBottomOf="@+id/date"
-      android:text="Voting Locations"
+      android:text="@string/voting_locations"
       ></TextView>
 
     <TextView
@@ -62,7 +62,7 @@
       app:layout_constraintEnd_toEndOf="@+id/Voting_locations"
       app:layout_constraintTop_toBottomOf="@+id/Voting_locations"
 
-      android:text="Ballot Information"
+      android:text="@string/ballot_information"
       ></TextView>
     <Button
       android:id="@+id/FollowElectionButton"
@@ -70,7 +70,7 @@
       android:layout_height="wrap_content"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="@+id/date"
-      android:text="Follow Election"
+      android:text="@string/follow_election"
       app:layout_constraintStart_toStartOf="@+id/date"
     ></Button>
   </androidx.constraintlayout.widget.ConstraintLayout>

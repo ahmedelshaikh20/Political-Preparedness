@@ -24,7 +24,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       app:layout_constraintStart_toStartOf="parent"
-      android:text="Representative Search"
+      android:text="@string/representative_search"
       android:textStyle="bold"
       android:textColor="#000000"
       android:textSize="30sp"
@@ -36,7 +36,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="@{address.line1}"
-      android:hint="Address line 1"
+      android:hint="@string/address_line_1"
       android:inputType="textPostalAddress"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/search_title" />
@@ -46,7 +46,7 @@
       android:id="@+id/address_line_2"
       android:layout_width="match_parent"
       android:layout_height="0dp"
-      android:hint="Address line 2"
+      android:hint="@string/address_line_2"
       android:text="@{address.line2}"
 
       android:inputType="textPostalAddress"
@@ -59,7 +59,7 @@
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:autofillHints=""
-      android:hint="City"
+      android:hint="@string/city"
       android:text="@{address.city}"
 
       android:inputType="textPostalAddress"
@@ -88,7 +88,7 @@
       android:layout_height="wrap_content"
       android:autofillHints=""
       android:inputType="number"
-      android:hint="Zip"
+      android:hint="@string/zip"
       android:text="@{address.zip}"
 
       android:maxLength="5"
@@ -100,7 +100,7 @@
       android:id="@+id/button_search"
       android:layout_width="match_parent"
       android:layout_margin="8dp"
-      android:text="Search"
+      android:text="@string/search"
       android:textAlignment="center"
       android:textColor="#000"
       android:layout_height="wrap_content"
@@ -113,7 +113,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:textColor="#000"
-      android:text="Location"
+      android:text="@string/location"
 
       app:layout_constraintTop_toBottomOf="@id/button_search" />
 
